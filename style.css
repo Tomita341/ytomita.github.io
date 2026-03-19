@@ -115,3 +115,25 @@ a:hover{
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     margin-left:20px;
 }
+.more-news{
+    transition: all 0.3s ease;
+}
+.hidden{
+    display:none;
+}
+
+.show-more-btn{
+    margin-top:15px;
+    padding:8px 16px;
+    border:none;
+    border-radius:20px;
+    background:#1a73e8;
+    color:white;
+    cursor:pointer;
+    font-size:0.9em;
+    transition:0.2s;
+}
+
+.show-more-btn:hover{
+    opacity:0.85;
+}
