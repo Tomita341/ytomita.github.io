@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Yuki Tomita</title>
-
-<style>
+<link rel="stylesheet" href="style.css">
+<!-- <style>
 .pdf-btn{
     display:inline-block;
     padding:4px 10px;
@@ -59,16 +59,70 @@ header{
     margin-bottom:30px;
 }
 
-</style>
-
+</style> -->
 </head>
 
 <body>
 
-<header>
+<header class="profile-header">
+
+<div class="profile-text">
 <h1>Yuki Tomita</h1>
 <p>Engineer / Researcher</p>
+</div>
+
+<img src="photos/myphoto.jpg" alt="Profile Photo" class="profile-img">
+
 </header>
+<section>
+<h2>News</h2>
+
+<div class="news-item">
+<span class="news-date">2026.03</span><br>
+ロボティクスシンポジアで発表しました。
+</div>
+
+<div class="news-item">
+<span class="news-date">2026.03</span><br>
+ICRA2026 に論文が採択されました。
+</div>
+
+<div class="news-item">
+<span class="news-date">2026.02</span><br>
+計測自動制御学会2025で優秀講演賞を受賞しました。
+</div>
+<!-- 折りたたみ部分 -->
+<div class="more-news hidden">
+
+<div class="news-item">
+<span class="news-date">2026.01</span><br>
+SII2026 で発表しました。
+</div>
+
+<div class="news-item">
+<span class="news-date">2025.12</span><br>
+計測自動制御学会2025 で発表しました。
+</div>
+<div class="news-item">
+<span class="news-date">2025.11</span><br>
+SII2026 に論文が採択されました。
+</div>
+<div class="news-item">
+<span class="news-date">2025.09</span><br>
+第43回日本ロボット学会学術講演会で発表しました。
+</div>
+
+<div class="news-item">
+<span class="news-date">2025.06</span><br>
+ロボティクス・メカトロニクス講演会で発表しました。
+</div>
+
+</div>
+
+<!-- 👇 ここが外に出る -->
+<button class="show-more-btn" onclick="toggleNews()">もっと見る</button>
+
+</section>
 
 <section>
 <h2>Publications</h2>
@@ -96,15 +150,15 @@ IEEE/SICE International Symposium on System Integration (SII), 2026.<br>
 "拡散モデルを利用した深層強化学習による歩行者混雑環境下での移動ロボットナビゲーション"<br>
 第43回日本ロボット学術講演会, 2025.<br>
 
-<a class="pdf-btn" href="papers/RSJ25-1.pdf">PDF</a>
+<a class="pdf-btn" href="https://robotics.ait.kyushu-u.ac.jp/kurazume/papers/RSJ25-1.pdf">PDF</a>
 </li>
 
 <li>
 <strong>富田 湧</strong>, 松本 耕平, 兵頭 侑樹, 倉爪 亮.<br>
 "拡散モデルを利用した強化学習による歩行者混雑環境下での移動ロボットナビゲーション"<br>
-ロボティクス・メカトロニクス 講演会, 2025.<br>
+ロボティクス・メカトロニクス講演会, 2025.<br>
 
-<a class="pdf-btn" href="papers/ROBOMECH25-7.pdf">PDF</a>
+<a class="pdf-btn" href="https://robotics.ait.kyushu-u.ac.jp/kurazume/papers/ROBOMECH25-7.pdf">PDF</a>
 </li>
 </ol>
 
@@ -114,7 +168,7 @@ IEEE/SICE International Symposium on System Integration (SII), 2026.<br>
 <section>
 <h2>Awards</h2>
 <ul>
-<li>SI2025 優秀講演賞</li>
+<li>計測自動制御学会 2025 優秀講演賞</li>
 </ul>
 </section>
 
@@ -134,5 +188,19 @@ IEEE/SICE International Symposium on System Integration (SII), 2026.<br>
 Email: tomita.yuki.341＠s.kyushu-u.ac.jp
 </p>
 </section>
+<script>
+function toggleNews(){
+    const more = document.querySelector('.more-news');
+    const btn = document.querySelector('.show-more-btn');
+
+    if(more.classList.contains('hidden')){
+        more.classList.remove('hidden');
+        btn.textContent = '閉じる';
+    }else{
+        more.classList.add('hidden');
+        btn.textContent = 'もっと見る';
+    }
+}
+</script>
 </body>
 </html>
